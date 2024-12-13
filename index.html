@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>绿动型厨</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <img id="logo" src="images\logo-white.png" alt="logo" />
+        <nav class="nav">
+          <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">产品展示</a></li>
+            <li><a href="#">个性化方案</a></li>
+            <li><a href="#">联系我们</a></li>
+          </ul>
+        </nav>
+        <div class="search-cart-user">
+          <input type="text" placeholder="搜索..." />
+          <img class="cart" src="images\cart.svg" alt="cart" />
+          <img
+            class="user"
+            src="images\iconmonstr-user-20-240.png"
+            alt="user"
+          />
+          <button class="btn--login">登录/注册</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="hero-content">
+        <h1>智能定制您的健康饮食</h1>
+        <p>科技与健康的完美结合，为您提供专属营养方案。</p>
+        <button class="hero-button">立即探索</button>
+      </div>
+    </div>
+
+    <section id="products" class="products">
+      <h2>产品展示</h2>
+      <div class="product-cards">
+        <article>
+          <div class="product-card shadow" id="product--01"></div>
+          <img
+            class="product--img"
+            src="images\product--1.png"
+            alt="product--01"
+          />
+        </article>
+        <article>
+          <div class="product-card shadow" id="product--02"></div>
+          <img
+            class="product--img"
+            src="images\product--2.png"
+            alt="product--02"
+          />
+        </article>
+        <article>
+          <div class="product-card shadow" id="product--03"></div>
+          <img
+            class="product--img"
+            src="images\product--3.png"
+            alt="product--03"
+          />
+        </article>
+      </div>
+    </section>
+
+    <section id="custom" class="custom">
+      <h2>个性化方案</h2>
+      <p>通过我们的问卷，获得最适合您的健康饮食方案。</p>
+      <button class="custom-button">开始定制</button>
+    </section>
+
+    <footer class="footer">
+      <div class="footer--container">
+        <p>&copy; 2024 绿动型厨 | 智能营养定制专家</p>
+      </div>
+    </footer>
+
+    <!--隐藏登录窗口-->
+    <form class="modal-login hidden">
+      <button class="btn--close-modal">&times;</button>
+      <p class="login-title">登录您的账号</p>
+      <div class="input-container">
+        <input type="email" placeholder="邮箱" />
+        <span></span>
+      </div>
+      <div class="input-container">
+        <input type="password" placeholder="密码" />
+      </div>
+      <button type="submit" class="submit">登录</button>
+      <p class="signup-link">
+        没有账号?
+        <a href="">注册一个</a>
+      </p>
+    </form>
+    <div class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
