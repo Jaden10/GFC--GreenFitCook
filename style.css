@@ -5,33 +5,40 @@ body {
   color: #333;
 }
 section {
-  padding: 15rem 3rem;
-  border-top: 1px solid #ddd;
+  padding: 12rem 3rem;
   transition: transform 1s, opacity 1s;
+  text-align: center;
 }
 h2 {
   margin-bottom: 100px;
+  text-decoration: underline 0.5px solid #e7e6e6;
+  text-underline-offset: 12px;
 }
 .header {
-  background: #4caf50;
+  background-color: #4caf50;
   color: white;
   padding: 10px 20px;
 }
 #logo {
   height: 5rem;
-  transition: all 0.3s;
 }
 .container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
 }
 
-.header .logo {
-  font-size: 24px;
-  font-weight: bold;
+.header.sticky {
+  width: 100%;
+  position: fixed;
+  background-color: #4caf4fe3;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.header .nav {
+  margin-left: 6.5rem;
 }
 
 .header .nav ul {
@@ -172,34 +179,97 @@ h2 {
   text-decoration: underline;
 }
 
-.hero {
-  text-align: center;
-  padding: 50px 20px;
-  background: #81c784;
-  color: white;
+.slider {
+  background-color: #4caf4f6c;
+  max-width: 100%;
+  height: 533.33px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero .hero-button {
-  background: white;
-  color: #4caf50;
-  padding: 10px 20px;
+.slide {
+  position: absolute;
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 1s;
+}
+
+.slide > img {
+  width: 800px;
+  height: auto;
+  object-fit: cover;
+}
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
   border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
   cursor: pointer;
-  font-size: 16px;
 }
 
-.products,
-.custom {
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+/* .section {
   padding: 40px 20px;
   text-align: center;
+} */
+
+.product_showspace {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.product-cards {
+.productRow {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: row;
 }
+
+.product-text {
+  font-family: "微软雅黑";
+  background-color: #b6fab83c;
+  border-radius: 5rem;
+  width: 30rem;
+}
+
+.product-text p {
+  width: 70%;
+  font-size: 15px;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 2rem;
+}
+
+.product-text-header {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 .product-card {
   width: 350px;
   height: 300px;
