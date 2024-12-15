@@ -182,7 +182,7 @@ h2 {
 .slider {
   background-color: #4caf4f6c;
   max-width: 100%;
-  height: 533.33px;
+  height: 100vh;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -201,8 +201,8 @@ h2 {
 }
 
 .slide > img {
-  width: 800px;
-  height: auto;
+  width: auto;
+  height: 87vh;
   object-fit: cover;
 }
 .slider__btn {
